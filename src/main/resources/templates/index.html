@@ -1,8 +1,10 @@
 <!Doctype html>
 <html xmlns:th="http://thymleaf.org">
-<head>
+<head th:replace="layout::site-head">
     <title> Technical blog</title>
 </head>
+
+<header th:replace="layout::logged-out"> </header>
 <body>
 <h1> ALL TECHNICAL POSTS</h1>
 <main id="post">  </main>

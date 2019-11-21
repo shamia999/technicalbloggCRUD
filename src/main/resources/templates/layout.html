@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymleaf.org" >
+<head th:fragment="site-head"></head>
+<body>
+<header th:fragment="logged-out" th:remove="tag">
+<header>
+    <a href="users/login.html" th:href="@{user/login}">Login</a>
+    <a href="users/registration.html" th:href="@{user/registration}"> Registration</a>
+</header>
+</header>
+<header th:fragment="logged-in" th:remove="tag">
+<header>
+
+<form method="post" th:action="@{user/logout}">
+    <input type="submit" value="logout"/>
+</form>
+</header>
+</header>
+</body>
+</html>
