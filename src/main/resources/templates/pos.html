@@ -1,0 +1,19 @@
+<!Doctype html>
+<html xmlns:th="http://thymeleaf.org">
+<head th:replace="layout::site-head">
+    <title> spring MVC-POST</title>
+</head>
+<body>
+<h1>Welcome user,posts</h1>
+<main id="pos">
+    <ap th:each="pp:${pos}">
+        <h2 th:text="${pp.title}"> </h2>
+        <div>
+            <p th:text="${pp.body}"></p>
+        </div>
+
+    </ap>
+</main>
+</body>
+
+</html>
