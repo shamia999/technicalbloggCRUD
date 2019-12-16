@@ -15,7 +15,8 @@ public class post
 @Column(name="BODY")
     private String body;
 //    private Date date;
-
+    @Transient
+private Date date;
     public Integer getId() {
         return id;
     }
@@ -23,8 +24,7 @@ public class post
     public void setId(Integer id) {
         this.id = id;
     }
-   @Transient
-     private Date date;
+
 
     public String getTitle()
     {
