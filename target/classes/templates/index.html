@@ -9,6 +9,7 @@
 <h1> ALL TECHNICAL POSTS</h1>
 <main id="post">  </main>
 <listt th:each="p:${postkey}">
+    <h2 th:text="${p.id}"></h2>
 <h2 th:text="${p.title}"> </h2>
 <i>posted on:</i> <span th:text="${p.date}"> </span>
 <div>

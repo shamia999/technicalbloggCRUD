@@ -7,9 +7,12 @@
 <h1>Welcome user,posts</h1>
 <main id="pos">
     <ap th:each="pp:${pos}">
+        <h2 th:text="${pp.id}" > </h2>
         <h2 th:text="${pp.title}"> </h2>
+        <i>posted on</i> <span th:text="${pp.date}"> </span>
         <div>
-            <p th:text="${pp.body}"></p>
+            <h2 th:text="${pp.body}"> </h2>
+
         </div>
 
     </ap>
