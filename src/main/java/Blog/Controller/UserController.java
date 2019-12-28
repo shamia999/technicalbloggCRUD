@@ -39,20 +39,22 @@ public class UserController {
     {
         if (use.validUser(user))
         {
-            return "redirect:/pos";
+            return "redirect:/posts";
         }
              else
             {
             return "user/login";
             }
     }
-    @RequestMapping(value="user/logout" ,method=RequestMethod.POST)
+    /*@RequestMapping(value="user/logout" ,method=RequestMethod.POST)
     public String logout(Model model)
     {
         List<post> listt= postServices.getOnePost();
         model.addAttribute("postkey",listt);
         return "index";
     }
+
+     */
 
 
 }

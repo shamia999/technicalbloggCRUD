@@ -14,3 +14,6 @@ public class  TechnicalBlogApplication
         SpringApplication.run(TechnicalBlogApplication.class,args);
     }
 }
+
+
+

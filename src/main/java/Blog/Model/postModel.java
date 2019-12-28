@@ -1,4 +1,4 @@
-package Blog.Model;
+ package Blog.Model;
 public class postModel {
     private String TitleOfPost;
     private String PostDetails;

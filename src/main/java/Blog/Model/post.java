@@ -6,17 +6,23 @@ import java.util.Date;
 @Table(name="post")
 public class post
 {
-@Id
-@Column(name="id")
 
-    private Integer id;
+@Id
+@GeneratedValue(strategy=GenerationType.AUTO)
+@Column(name="id")
+private Integer id;
+
 @Column(name="title")
-    private String title;
-@Column(name="BODY")
+private String title;
+
+
+
+@Column(name="date")
+  private Date date;
+
+    @Column(name="body")
     private String body;
-//    private Date date;
-    @Transient
-private Date date;
+
     public Integer getId() {
         return id;
     }
@@ -36,7 +42,8 @@ private Date date;
         this.title = title;
     }
 
-    public String getBody() {
+    public String getBody()
+    {
         return body;
     }
 

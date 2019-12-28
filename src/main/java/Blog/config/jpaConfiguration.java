@@ -23,12 +23,12 @@ public class jpaConfiguration
     }
     @Bean
     public DataSource datasource()
-    {
+    { //technical information to get data from database
 
         DriverManagerDataSource ds=new DriverManagerDataSource();
         ds.setDriverClassName("org.postgresql.Driver");
         ds.setUrl("jdbc:postgresql://localhost:5433/post");
-        ds.setUsername("postgres");
+         ds.setUsername("postgres");
         ds.setPassword("9463690786");
         return ds;
     }
