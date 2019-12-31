@@ -1,17 +1,22 @@
 <!Doctype html>
-<html xmlns:th="http://thymleaf.org">
+<html xmlns:th="http://thymeleaf.org">
 <head th:replace="layout::site-head">
     <title>Register page</title>
 </head>
+<header th:replace="layout::logged-out"></header>
 
 <h2>Please Register here:</h2>
-<form method="post" th:object="${User}">
-    <label for="Firstname"> Firstname </label>
-    <input type="text"     id="Firstname">
-    <label for="Lastname">   Lastname </label>
-    <input type="text"   id="Lastname">
-    <label for="password"> password</label>
-    <input type="password" id="password"/>
+<form  th:action="@{/user/registration}" th:method="POST" th:object="${User}">
+    <label for="username"> username </label>
+    <input type="text"     id="username" name="username"  th:field="${User.username}"/>
+    <label for="password">   password </label>
+    <input type="password"   id="password" name="password"  th:field="${User.password}"/>
+    <label for="fullname">fullname</label>
+    <input type="text" id="fullname" name="fullname" th:field="${User.profile.fullname}" />
+    <label for ="Email">Email</label>
+    <input type="text" id="Email" name="Email" th:field="${User.profile.Email}" />
+    <label for ="Mobile">Mobile</label>
+    <input type="text" id="Mobile" name="Mobile" th:field="${User.profile.Mobile}" />
     <input type ="submit" value="Register"/>
 
 </form>

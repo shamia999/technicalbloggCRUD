@@ -18,7 +18,8 @@ public class PostController {
     private postServices postservices;
 
     @RequestMapping("posts")
-    public String getUserPosts(Model m) {
+    public String getUserPosts(Model m)
+    {
         List<post> posts = postservices.getAllpost();
         m.addAttribute("posts", posts);
         return "posts";
@@ -62,6 +63,6 @@ return "/posts/edit";
     public String delete(@RequestParam(name="posttitle")String posttitle)
     {
         postservices.delete(posttitle);
-      return  "redirect:/posts";
+           return "redirect:/posts";
     }
 }

@@ -7,6 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan
 @EnableAutoConfiguration
 
+
 public class  TechnicalBlogApplication
 {
     public static void main(String[]args)
@@ -14,6 +15,7 @@ public class  TechnicalBlogApplication
         SpringApplication.run(TechnicalBlogApplication.class,args);
     }
 }
+
 
 
 

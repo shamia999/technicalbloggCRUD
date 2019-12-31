@@ -1,15 +1,47 @@
 package Blog.Model;
-
+import javax.persistence.*;
+@Entity
+@Table(name="users")
 public class User {
-    private String Username;
-    private String password;
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
+    @Column(name="id")
+    private Integer id;
 
-    public String getUsername() {
-        return Username;
+    @Column(name="username")
+    private String username;
+
+    @Column(name="password")
+    private String password;
+    @OneToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    @JoinColumn(name="id")
+    private User_Profile profile;
+
+    public User_Profile getProfile() {
+        return profile;
     }
 
-    public void setUsername(String username) {
-        Username = username;
+    public void setProfile(User_Profile profile) {
+        this.profile = profile;
+    }
+
+    public Integer getId()
+{
+    return id;
+}
+public void setId(Integer id)
+{
+    this.id=id;
+}
+
+    public String getUsername()
+    {
+        return username;
+    }
+
+    public void setUsername(String username)
+    {
+        this.username = username;
     }
     public String getPassword()
     {

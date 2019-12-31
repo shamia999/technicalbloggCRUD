@@ -1,11 +1,11 @@
 <!Doctype html>
-<html xmlns:th="http://thymleaf.org">
+<html xmlns:th="http://thymeleaf.org">
       <head th:replace="layout::site-head">
 <title>spring MVC Application </title>
       </head>
 <header th:replace="layout::logged-out"></header>
 <h2>please login:</h2>
-<form method="post" th:object="${User}">
+<form  th:action="@{/user/login}" method="post" th:object="${User}">
     <label for="username" >Username</label>
     <input type="text" id="username" name="username"/>
     <label for="password">password</label>

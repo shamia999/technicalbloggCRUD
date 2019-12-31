@@ -1,28 +1,28 @@
 
 
 <!DOCTYPE html>
-<html xmlns:th="http://thymleaf.org" >
+<html xmlns:th="http://thymeleaf.org" >
 <head th:fragment="site-head"></head>
 <body>
 <header th:fragment="logged-out" th:remove="tag">
 <header>
-    <a href="users/login.html" th:href="@{/user/login}">Login</a>
-    <a href="users/registration.html" th:href="@{/user/registration}"> Registration</a>
+    <a href="user/login.html" th:href="@{/user/login}">Login</a>
+    <a href="user/registration.html" th:href="@{/user/registration}"> Registration</a>
 </header>
 </header>
 <header th:fragment="logged-in"  th:remove="tag">
+    <header>
+        <p> logged-in as:</p>
+        <label th:text="${session.luser.profile.fullName}"> </label>|
 
-<header>
+
 <a href="posts/create.html" th:href="@{/posts/create}"> createPost   </a>
 <form method="post" th:action="@{/user/logout}">
-
 
     <input type="submit" value="logout"/>
 </form>
 </header>
 </header>
-
-
 
 </body>
 </html>
